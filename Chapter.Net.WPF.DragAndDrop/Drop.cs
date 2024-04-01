@@ -6,85 +6,86 @@
 
 using System.Windows;
 
-namespace Chapter.Net.WPF.DragAndDrop;
-
-/// <summary>
-///     Allows to attach drop items to a control to enable files and folders drag and drop to an ICommand.
-/// </summary>
-public static class Drop
+namespace Chapter.Net.WPF.DragAndDrop
 {
     /// <summary>
-    ///     Identifies the <see cref="GetDropItems(DependencyObject)" />
-    ///     <see cref="SetDropItems(DependencyObject, DropItemCollection)" /> attached property.
+    ///     Allows to attach drop items to a control to enable files and folders drag and drop to an ICommand.
     /// </summary>
-    public static readonly DependencyProperty DropItemsProperty =
-        DependencyProperty.RegisterAttached("DropItems", typeof(DropItemCollection), typeof(Drop), new PropertyMetadata(OnDropItemsChanged));
-
-    /// <summary>
-    ///     Identifies the <see cref="GetDropItem(DependencyObject)" /> <see cref="SetDropItem(DependencyObject, DropItem)" />
-    ///     attached property.
-    /// </summary>
-    public static readonly DependencyProperty DropItemProperty =
-        DependencyProperty.RegisterAttached("DropItem", typeof(DropItem), typeof(Drop), new PropertyMetadata(OnDropItemChanged));
-
-    /// <summary>
-    ///     Gets the drop item collection containing all the drop items for a control.
-    /// </summary>
-    /// <param name="obj">The element from which the property value is read.</param>
-    /// <returns>The drop item collection containing all the drop items for a control.</returns>
-    public static DropItemCollection GetDropItems(DependencyObject obj)
+    public static class Drop
     {
-        return (DropItemCollection)obj.GetValue(DropItemsProperty);
-    }
+        /// <summary>
+        ///     Identifies the <see cref="GetDropItems(DependencyObject)" />
+        ///     <see cref="SetDropItems(DependencyObject, DropItemCollection)" /> attached property.
+        /// </summary>
+        public static readonly DependencyProperty DropItemsProperty =
+            DependencyProperty.RegisterAttached("DropItems", typeof(DropItemCollection), typeof(Drop), new PropertyMetadata(OnDropItemsChanged));
 
-    /// <summary>
-    ///     Sets the drop item collection containing all the drop items for a control.
-    /// </summary>
-    /// <param name="obj">The element from which the property value is set to.</param>
-    /// <param name="value">The drop item collection containing all the drop items for a control.</param>
-    public static void SetDropItems(DependencyObject obj, DropItemCollection value)
-    {
-        obj.SetValue(DropItemsProperty, value);
-    }
+        /// <summary>
+        ///     Identifies the <see cref="GetDropItem(DependencyObject)" /> <see cref="SetDropItem(DependencyObject, DropItem)" />
+        ///     attached property.
+        /// </summary>
+        public static readonly DependencyProperty DropItemProperty =
+            DependencyProperty.RegisterAttached("DropItem", typeof(DropItem), typeof(Drop), new PropertyMetadata(OnDropItemChanged));
 
-    /// <summary>
-    ///     Gets the drop item for a control.
-    /// </summary>
-    /// <param name="obj">The element from which the property value is read.</param>
-    /// <returns>The drop item for a control.</returns>
-    public static DropItem GetDropItem(DependencyObject obj)
-    {
-        return (DropItem)obj.GetValue(DropItemProperty);
-    }
+        /// <summary>
+        ///     Gets the drop item collection containing all the drop items for a control.
+        /// </summary>
+        /// <param name="obj">The element from which the property value is read.</param>
+        /// <returns>The drop item collection containing all the drop items for a control.</returns>
+        public static DropItemCollection GetDropItems(DependencyObject obj)
+        {
+            return (DropItemCollection)obj.GetValue(DropItemsProperty);
+        }
 
-    /// <summary>
-    ///     Sets the drop item for a control.
-    /// </summary>
-    /// <param name="obj">The element from which the property value is set to.</param>
-    /// <param name="value">The drop item for a control.</param>
-    public static void SetDropItem(DependencyObject obj, DropItem value)
-    {
-        obj.SetValue(DropItemProperty, value);
-    }
+        /// <summary>
+        ///     Sets the drop item collection containing all the drop items for a control.
+        /// </summary>
+        /// <param name="obj">The element from which the property value is set to.</param>
+        /// <param name="value">The drop item collection containing all the drop items for a control.</param>
+        public static void SetDropItems(DependencyObject obj, DropItemCollection value)
+        {
+            obj.SetValue(DropItemsProperty, value);
+        }
 
-    private static void OnDropItemsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    {
-        var control = d as UIElement;
+        /// <summary>
+        ///     Gets the drop item for a control.
+        /// </summary>
+        /// <param name="obj">The element from which the property value is read.</param>
+        /// <returns>The drop item for a control.</returns>
+        public static DropItem GetDropItem(DependencyObject obj)
+        {
+            return (DropItem)obj.GetValue(DropItemProperty);
+        }
 
-        if (e.OldValue != null)
-            foreach (var dropItem in (DropItemCollection)e.OldValue)
-                dropItem.Detach();
+        /// <summary>
+        ///     Sets the drop item for a control.
+        /// </summary>
+        /// <param name="obj">The element from which the property value is set to.</param>
+        /// <param name="value">The drop item for a control.</param>
+        public static void SetDropItem(DependencyObject obj, DropItem value)
+        {
+            obj.SetValue(DropItemProperty, value);
+        }
 
-        if (e.NewValue != null)
-            foreach (var dropItem in (DropItemCollection)e.NewValue)
-                dropItem.Attach(control);
-    }
+        private static void OnDropItemsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var control = d as UIElement;
 
-    private static void OnDropItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    {
-        var control = d as UIElement;
+            if (e.OldValue != null)
+                foreach (var dropItem in (DropItemCollection)e.OldValue)
+                    dropItem.Detach();
 
-        ((DropItem)e.OldValue)?.Detach();
-        ((DropItem)e.NewValue)?.Attach(control);
+            if (e.NewValue != null)
+                foreach (var dropItem in (DropItemCollection)e.NewValue)
+                    dropItem.Attach(control);
+        }
+
+        private static void OnDropItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var control = d as UIElement;
+
+            ((DropItem)e.OldValue)?.Detach();
+            ((DropItem)e.NewValue)?.Attach(control);
+        }
     }
 }

@@ -4,26 +4,27 @@
 // </copyright>
 // -----------------------------------------------------------------------------------------------------------------
 
-namespace Chapter.Net.WPF.DragAndDrop;
-
-/// <summary>
-///     The command args containing the data sent with the <see cref="DropItem.Command" />.
-/// </summary>
-public sealed class ItemDroppedArgs
+namespace Chapter.Net.WPF.DragAndDrop
 {
-    internal ItemDroppedArgs(string item, object parameter)
+    /// <summary>
+    ///     The command args containing the data sent with the <see cref="DropItem.Command" />.
+    /// </summary>
+    public sealed class ItemDroppedArgs
     {
-        Item = item;
-        Parameter = parameter;
+        internal ItemDroppedArgs(string item, object parameter)
+        {
+            Item = item;
+            Parameter = parameter;
+        }
+
+        /// <summary>
+        ///     Gets the dropped item.
+        /// </summary>
+        public string Item { get; }
+
+        /// <summary>
+        ///     Gets the command parameter.
+        /// </summary>
+        public object Parameter { get; }
     }
-
-    /// <summary>
-    ///     Gets the dropped item.
-    /// </summary>
-    public string Item { get; }
-
-    /// <summary>
-    ///     Gets the command parameter.
-    /// </summary>
-    public object Parameter { get; }
 }
