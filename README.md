@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/dwndland/Chapter.Net.WPF.DragAndDrop/master/Icon.png" alt="logo" width="64"/>
+<img src="https://raw.githubusercontent.com/dwndlnd/Chapter.Net.WPF.DragAndDrop/master/Icon.png" alt="logo" width="64"/>
 
 # Chapter.Net.WPF.DragAndDrop Library
 
@@ -81,7 +81,7 @@ Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop
 
 ## Links
 * [NuGet](https://www.nuget.org/packages/Chapter.Net.WPF.DragAndDrop)
-* [GitHub](https://github.com/dwndland/Chapter.Net.WPF.DragAndDrop)
+* [GitHub](https://github.com/dwndlnd/Chapter.Net.WPF.DragAndDrop)
 
 ## License
 Copyright (c) David Wendland. All rights reserved.
