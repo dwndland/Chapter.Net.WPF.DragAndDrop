@@ -1,10 +1,15 @@
-﻿using System.Windows;
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="ListBoxDragHandler.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
+
 using System.Windows.Controls;
 
 // ReSharper disable once CheckNamespace
 namespace Chapter.Net.WPF.DragAndDrop;
 
-public class ListBoxDragHandler : DragHandler
+internal class ListBoxDragHandler : DragHandler
 {
     private readonly ListBox _listBox;
     private ListBoxItem _dragContainer;

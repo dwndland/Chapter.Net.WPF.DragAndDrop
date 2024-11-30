@@ -1,4 +1,10 @@
-﻿using System;
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="DragItem.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
+
+using System;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;

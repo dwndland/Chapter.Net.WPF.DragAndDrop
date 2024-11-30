@@ -1,10 +1,15 @@
-﻿using System.Windows.Controls;
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="DataGridDragHandler.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
+
+using System.Windows.Controls;
 
 // ReSharper disable once CheckNamespace
-
 namespace Chapter.Net.WPF.DragAndDrop;
 
-public class DataGridDragHandler : DragHandler
+internal class DataGridDragHandler : DragHandler
 {
     private readonly DataGrid _dataGrid;
     private DataGridRow _dragContainer;

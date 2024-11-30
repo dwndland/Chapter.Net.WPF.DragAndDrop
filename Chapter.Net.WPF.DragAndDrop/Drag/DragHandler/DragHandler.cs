@@ -1,9 +1,15 @@
-﻿using System.Windows;
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="DragHandler.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
+
+using System.Windows;
 
 // ReSharper disable once CheckNamespace
 namespace Chapter.Net.WPF.DragAndDrop;
 
-public abstract class DragHandler
+internal abstract class DragHandler
 {
     public abstract bool CanDrag(Drags drags, object source);
     public abstract object GetDragData(Drags drags);

@@ -1,9 +1,15 @@
-﻿using System.Windows;
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="ObjectDragHandler.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
+
+using System.Windows;
 
 // ReSharper disable once CheckNamespace
 namespace Chapter.Net.WPF.DragAndDrop;
 
-public class ObjectDragHandler : DragHandler
+internal class ObjectDragHandler : DragHandler
 {
     private readonly FrameworkElement _element;
 

@@ -76,7 +76,7 @@ public sealed class DropItem : Freezable
     }
 
     /// <summary>
-    /// Gets or sets the format accepting on drop.
+    ///     Gets or sets the format accepting on drop.
     /// </summary>
     /// <value>Default: null.</value>
     [DefaultValue(null)]
@@ -199,6 +199,7 @@ public sealed class DropItem : Freezable
                     if (File.Exists(file))
                         OnCommand(file);
                 }
+
                 break;
             case Drops.Files:
                 OnCommand(dropData.Select(x => x.ToString()).Where(File.Exists).ToArray());
@@ -210,6 +211,7 @@ public sealed class DropItem : Freezable
                     if (Directory.Exists(file))
                         OnCommand(file);
                 }
+
                 break;
             case Drops.Folders:
                 OnCommand(dropData.Select(x => x.ToString()).Where(Directory.Exists).ToArray());

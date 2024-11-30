@@ -1,4 +1,10 @@
-﻿using System.Windows;
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="Drag.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
+
+using System.Windows;
 
 // ReSharper disable once CheckNamespace
 
