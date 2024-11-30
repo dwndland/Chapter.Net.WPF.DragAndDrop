@@ -1,17 +1,19 @@
 ﻿// -----------------------------------------------------------------------------------------------------------------
-// <copyright file="ItemDroppedArgs.cs" company="dwndland">
+// <copyright file="FileFolderDroppedArgs.cs" company="dwndland">
 //     Copyright (c) David Wendland. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------------------------------------------------
+
+// ReSharper disable once CheckNamespace
 
 namespace Chapter.Net.WPF.DragAndDrop;
 
 /// <summary>
 ///     The command args containing the data sent with the <see cref="DropItem.Command" />.
 /// </summary>
-public sealed class ItemDroppedArgs
+public sealed class FileFolderDroppedArgs
 {
-    internal ItemDroppedArgs(string item, object parameter)
+    internal FileFolderDroppedArgs(string item, object parameter)
     {
         Item = item;
         Parameter = parameter;

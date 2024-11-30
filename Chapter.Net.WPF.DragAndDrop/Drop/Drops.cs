@@ -1,15 +1,17 @@
 ﻿// -----------------------------------------------------------------------------------------------------------------
-// <copyright file="DropType.cs" company="dwndland">
+// <copyright file="Drops.cs" company="dwndland">
 //     Copyright (c) David Wendland. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------------------------------------------------
+
+// ReSharper disable once CheckNamespace
 
 namespace Chapter.Net.WPF.DragAndDrop;
 
 /// <summary>
 ///     Items allowed to drop within <see cref="DropItem" />.
 /// </summary>
-public enum DropType
+public enum Drops
 {
     /// <summary>
     ///     The user can drop single files.
@@ -34,5 +36,10 @@ public enum DropType
     /// <summary>
     ///     The user can drop multiple files and folders.
     /// </summary>
-    FilesAndFolders
+    FilesAndFolders,
+
+    /// <summary>
+    ///     The user can drop custom data.
+    /// </summary>
+    Custom
 }

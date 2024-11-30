@@ -6,6 +6,8 @@
 
 using System.Windows;
 
+// ReSharper disable once CheckNamespace
+
 namespace Chapter.Net.WPF.DragAndDrop;
 
 /// <summary>
@@ -14,15 +16,13 @@ namespace Chapter.Net.WPF.DragAndDrop;
 public static class Drop
 {
     /// <summary>
-    ///     Identifies the <see cref="GetDropItems(DependencyObject)" />
-    ///     <see cref="SetDropItems(DependencyObject, DropItemCollection)" /> attached property.
+    ///     The DropItems attached property.
     /// </summary>
     public static readonly DependencyProperty DropItemsProperty =
         DependencyProperty.RegisterAttached("DropItems", typeof(DropItemCollection), typeof(Drop), new PropertyMetadata(OnDropItemsChanged));
 
     /// <summary>
-    ///     Identifies the <see cref="GetDropItem(DependencyObject)" /> <see cref="SetDropItem(DependencyObject, DropItem)" />
-    ///     attached property.
+    ///     The DropItem attached property.
     /// </summary>
     public static readonly DependencyProperty DropItemProperty =
         DependencyProperty.RegisterAttached("DropItem", typeof(DropItem), typeof(Drop), new PropertyMetadata(OnDropItemChanged));

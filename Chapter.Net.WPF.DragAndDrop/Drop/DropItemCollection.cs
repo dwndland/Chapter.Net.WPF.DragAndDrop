@@ -6,6 +6,8 @@
 
 using System.Windows;
 
+// ReSharper disable once CheckNamespace
+
 namespace Chapter.Net.WPF.DragAndDrop;
 
 /// <summary>
