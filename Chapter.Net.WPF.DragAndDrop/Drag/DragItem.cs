@@ -16,8 +16,7 @@ using System.Windows.Input;
 namespace Chapter.Net.WPF.DragAndDrop;
 
 /// <summary>
-///     The drop item attached on a control using the <see cref="Drag.DragItemProperty" /> or
-///     <see cref="Drag.DragItemsProperty" />.
+///     The drop item attached on a control using the <see cref="Drag.DragItemProperty" />.
 /// </summary>
 public sealed class DragItem : Freezable
 {
