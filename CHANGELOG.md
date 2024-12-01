@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2024-12-01
+### Added
+- Added .net 9 to the supported .net versions.
+### Removed
+- Removed DragCollection.
+### Supported .Net Versions
+- .Net 8 (Windows)
+- .Net 9 (Windows)
+
 ## [2.1.0] - 2024-11-30
 ### Added
 - Add possibility to define the drop cursor effect
@@ -14,10 +23,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add drag item to support drag of different objects from anywhere
 ### Changed
 - Renamed properties in the drop item
+### Supported .Net Versions
+- .Net 8 (Windows)
 
 ## [2.0.0] - 2024-06-07
 ### Changed
 - Update to support .Net 8 only.
+### Supported .Net Versions
+- .Net 8 (Windows)
 
 ## [1.1.0] - 2024-04-01
 ### Added

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <Authors>David Wendland</Authors>
     <Description>Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop within the WPF application.</Description>
     <Copyright>Copyright (c) 2024 David Wendland</Copyright>
@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Chapter.Net.WPF" Version="3.2.0" />
+    <PackageReference Include="Chapter.Net.WPF" Version="3.3.0" />
   </ItemGroup>
 
 </Project>

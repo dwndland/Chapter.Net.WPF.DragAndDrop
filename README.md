@@ -6,6 +6,7 @@
 Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop within the WPF application.
 
 ## Features
+- **DragItem:** Allow drag selected item(s) or data context from any control.
 - **DropItem:** Allow drop of a particular type of files to a target controls.
 - **DropItems:** Allow drop of one or more particular types of items to a target control.
 
@@ -22,7 +23,7 @@ Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop
     ```xaml
     <ListBox AllowDrop="True">
         <chapter:Drop.DropItem>
-            <chapter:DropItem DropType="Files" DragDropEffect="Copy" Command="{Binding DropFilesCommand}" />
+            <chapter:DropItem Drops="Files" Effect="Copy" Command="{Binding DropFilesCommand}" />
         </chapter:Drop.DropItem>
     </ListBox>
     ```
@@ -49,8 +50,8 @@ Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop
     <ListBox AllowDrop="True">
         <chapter:Drop.DropItems>
             <chapter:DropItemCollection>
-                <chapter:DropItem DropType="File" DragDropEffect="Copy" Command="{Binding DropFileCommand}" />
-                <chapter:DropItem DropType="Folder" DragDropEffect="Copy" Command="{Binding DropFolderCommand}" />
+                <chapter:DropItem Drops="File" Effect="Copy" Command="{Binding DropFileCommand}" />
+                <chapter:DropItem Drops="Folder" Effect="Copy" Command="{Binding DropFolderCommand}" />
             </chapter:DropItemCollection>
         </chapter:Drop.DropItems>
     </ListBox>
@@ -73,6 +74,39 @@ Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop
         }
 
         private void DropFolder(ItemDroppedArgs e)
+        {
+            //e.Item
+        }
+    }
+    ```
+
+4. **DragItem:**
+    - Usage
+    ```xaml
+    <ListBox>
+        <chapter:Drag.DragItem>
+            <chapter:DropItem Drags="SelectedItem" Effect="Copy" Format="SelectedItem" />
+        </chapter:Drag.DragItem>
+    </ListBox>
+    ```
+    ```xaml
+    <ListBox AllowDrop="True">
+        <chapter:Drop.DropItem>
+            <chapter:DropItem Drops="Custom" Effect="Copy" Format="SelectedItem" Command="{Binding DropItemCommand}" />
+        </chapter:Drop.DropItem>
+    </ListBox>
+    ```
+    ```csharp
+    public void DemoViewModel : ObservableObject
+    {
+        public DemoViewModel()
+        {
+            DropItemCommand = new DelegateCommand<CustomDroppedArgs>(DropItem);
+        }
+
+        public IDelegateCommand DropItemCommand { get; }
+
+        private void DropItem(CustomDroppedArgs e)
         {
             //e.Item
         }
