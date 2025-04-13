@@ -5,8 +5,8 @@
     <UseWPF>true</UseWPF>
     <Version>2.2.0</Version>
     <Authors>David Wendland</Authors>
-    <Description>Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop within the WPF application.</Description>
-    <Copyright>Copyright (c) 2024 David Wendland</Copyright>
+    <Description>Chapter.Net.WPF.DragAndDrop is a library that provides objects and helpers to simplify implementing drag-and-drop functionality in WPF applications.</Description>
+    <Copyright>Copyright (c) 2025 David Wendland</Copyright>
     <PackageProjectUrl>https://github.com/dwndland/Chapter.Net.WPF.DragAndDrop</PackageProjectUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>

@@ -3,7 +3,7 @@
 # Chapter.Net.WPF.DragAndDrop Library
 
 ## Overview
-Chapter.Net.WPF.DragAndDrop brings objects and helper to work with drag and drop within the WPF application.
+Chapter.Net.WPF.DragAndDrop is a library that provides objects and helpers to simplify implementing drag-and-drop functionality in WPF applications.
 
 ## Features
 - **DragItem:** Allow drag selected item(s) or data context from any control.
